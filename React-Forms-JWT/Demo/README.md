@@ -1,3 +1,7 @@
+# Important Note
+
+API URL has expired. Loading... will show up in place of list, as a result, since nothing is being fetched.
+
 # Block 27: React Forms
 
 Guided in-class project for Block 27: React Forms
