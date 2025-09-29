@@ -9,6 +9,11 @@ export default function AddToDo({ tasks, setTasks }) {
     event.preventDefault();
 
     try {
+      // example of Form Validation. Returns error if empty string is submitted
+      if (task === "") {
+        setError("Please provide a task");
+        return;
+      }
       const response = await fetch(
         "https://todo-api-ur6k.onrender.com/api/todos",
         {
