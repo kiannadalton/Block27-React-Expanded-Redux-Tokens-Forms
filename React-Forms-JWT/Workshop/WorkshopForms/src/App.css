@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(196, 224, 190);
+  color: black;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  background-color: rgb(74, 48, 27);
+  color: aliceblue;
+  margin-top: 0px;
+  padding: 10px;
+}
+
+.signupForm {
+  width: 40%;
+  margin: auto;
+  padding: 0px 10px 15px 10px ;
+  border: 2px solid;
+  border-radius: 20px;
+  background-color: rgb(230, 211, 187);
+}
+
+input {
+  margin: 5px;
+}
+
+button {
+  background-color: rgb(74, 48, 27);
+  color: aliceblue;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+button:hover {
+  background-color: rgb(133, 84, 44);
+  color: aliceblue;
+  
+}
