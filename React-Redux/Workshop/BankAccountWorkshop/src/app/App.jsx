@@ -9,7 +9,8 @@ export default function App() {
     <main>
       <h1>Bank Account</h1>
       <Transactions />
-      <TransactionHistory />
+      {/* get Transactions to work before starting the below: */}
+      {/* <TransactionHistory /> */}
     </main>
   );
 }
