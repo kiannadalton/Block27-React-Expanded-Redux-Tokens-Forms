@@ -6,6 +6,7 @@ function AddTodo() {
   const [todo, setTodo] = useState("");
   const [error, setError] = useState(null);
   // 👉 STEP 13: Create a dispatch using useDispatch
+  const dispatch = useDispatch();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,6 +28,7 @@ function AddTodo() {
         return;
       }
       // 👉 STEP 14:  dispatch addTodo with json response
+      dispatch(addTodo(json))
     } catch (err) {
       setError(err);
     }

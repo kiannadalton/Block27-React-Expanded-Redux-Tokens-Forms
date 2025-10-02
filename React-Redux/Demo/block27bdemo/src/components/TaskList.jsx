@@ -4,6 +4,7 @@ import { getTasks, setTodos } from "../features/todos/todoSlice";
 function TaskList() {
   const tasks = useSelector(getTasks);
   const dispatch = useDispatch();
+  
 
   const completeTask = (taskId) => {
     const updatedTasks = tasks.map((task) => {
@@ -18,6 +19,7 @@ function TaskList() {
     });
 
     // 👉 STEP 12: dispatch setTodos with the updated Tasks
+    dispatch(setTodos(updatedTasks))
   };
 
   return (
