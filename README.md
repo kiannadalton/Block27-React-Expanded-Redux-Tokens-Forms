@@ -4,8 +4,8 @@ This is a collection of various items learned within React, including React Form
 
 ## Deployed Workshop Links:
 
-React Forms JWT Sign Up Workshop: https://block27signupworkshop.netlify.app/
-React Redux Bank Account Workshop: https://block27reactreduxworkshop.netlify.app/
+* React Forms JWT Sign Up Workshop: https://block27signupworkshop.netlify.app/
+* React Redux Bank Account Workshop: https://block27reactreduxworkshop.netlify.app/
 
 ## Learning Lessons:
 
