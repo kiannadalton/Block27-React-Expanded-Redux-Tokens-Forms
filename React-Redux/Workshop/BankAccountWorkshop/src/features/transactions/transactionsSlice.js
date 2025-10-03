@@ -11,9 +11,12 @@ import { createSlice } from "@reduxjs/toolkit";
 // TODO: Set initial state to have a balance of 0 and an empty array of transactions.
 
 /** @type {{balance: number, history: Transaction[]}} */
-const initialState = {};
+const initialState = {
+  balance: 0,
+  history: [],
+};
 
-/* TODO
+/* //TODO
 Add two reducers  to the transactions slice: "deposit" and "transfer".
 Both reducers update the balance and then record the transaction.
 
@@ -22,7 +25,6 @@ while "transfer" should decrease the balance by the amount in the payload.
 
 Refer to the "withdrawal" reducer, which is already implemented for you.
 */
-
 const transactionsSlice = createSlice({
   name: "transactions",
   initialState,
@@ -31,7 +33,23 @@ const transactionsSlice = createSlice({
       state.balance -= payload.amount;
       state.history.push({
         type: "withdrawal",
-        amount: payload.amount,
+        amount: payload,
+        balance: state.balance,
+      });
+    },
+    deposit: (state, { payload }) => {
+      state.balance += payload.amount;
+      state.history.push({
+        type: "deposit",
+        amount: payload,
+        balance: state.balance,
+      });
+    },
+    transfer: (state, { payload }) => {
+      state.balance -= payload.amount;
+      state.history.push({
+        type: "transfer",
+        amount: payload,
         balance: state.balance,
       });
     },
