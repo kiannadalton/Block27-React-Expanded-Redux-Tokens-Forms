@@ -1,3 +1,5 @@
+// No longer needed since RTK query takes care of the reducer aspect of the code.
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {

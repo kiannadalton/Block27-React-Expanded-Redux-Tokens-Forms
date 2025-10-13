@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../features/todos/todoSlice";
+import { useAddTodoMutation } from "../api/todoApi";
 
 function AddTodo() {
   const [todo, setTodo] = useState("");
