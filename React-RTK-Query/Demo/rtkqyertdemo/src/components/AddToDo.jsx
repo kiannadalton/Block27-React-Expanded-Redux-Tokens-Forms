@@ -1,36 +1,25 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import { useAddTodoMutation } from "../api/todoApi";
+import { addTodo } from "../features/todos/todoSlice";
 
 function AddTodo() {
   const [todo, setTodo] = useState("");
   const [error, setError] = useState(null);
-  const dispatch = useDispatch();
+  const [AddTodo] = useAddTodoMutation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    // the body we're sending is destructured so we can control exactly what information is being sent.
     try {
-      const response = await fetch(
-        "https://todo-api-ur6k.onrender.com/api/todos",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ task: todo }),
-        }
-      );
-
-      const json = await response.json();
-
-      if (!response.ok) {
-        setError(json.errors[0].message);
-        return;
-      }
-
-      dispatch(addTodo(json));
+       addTodo({
+         task: todo,
+         completed: false,
+       });
     } catch (err) {
       setError(err);
     }
+   
 
     //reset form
     setTodo("");
