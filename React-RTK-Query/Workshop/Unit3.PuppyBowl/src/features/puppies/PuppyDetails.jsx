@@ -1,17 +1,25 @@
+import { useGetPuppyQuery, useDeletePuppyMutation } from "../../store/api";
 /**
  * @component
  * Shows comprehensive information about the selected puppy, if there is one.
  * Also provides a button for users to remove the selected puppy from the roster.
  */
 export default function PuppyDetails({ selectedPuppyId, setSelectedPuppyId }) {
+  console.log(selectedPuppyId)
   // TODO: Grab data from the `getPuppy` query
-
+  //needed to do {id: selectedPuppyId} to make it populate correctly
+  const { data, error, isLoading } = useGetPuppyQuery({id: selectedPuppyId});
   // TODO: Use the `deletePuppy` mutation to remove a puppy when the button is clicked
+  const [deletePuppy] = useDeletePuppyMutation();
 
+  // *Completed
   function removePuppy(id) {
+    deletePuppy({id});
     setSelectedPuppyId();
   }
 
+  //created puppy variable to access player within data
+  let puppy = data?.data?.player
   // There are 3 possibilities:
   let $details;
   // 1. A puppy has not yet been selected.
