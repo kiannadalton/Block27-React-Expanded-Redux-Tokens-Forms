@@ -10,20 +10,22 @@ export default function PuppyForm() {
   const [breed, setBreed] = useState("");
   const [err, setErr] = useState("");
   const [addPuppy] = useAddPuppyMutation();
-  const {data, error, isLoading} = useGetPuppiesQuery();
+  const { data, error, isLoading } = useGetPuppiesQuery();
 
-
+  // *Completed
   // TODO: Use the `addPuppy` mutation to add a puppy when the form is submitted
 
   function postPuppy(event) {
     event.preventDefault();
 
     try {
-      console.log(event)
       // addPuppy(event)
+      addPuppy({
+        name,
+        breed,
+      });
     } catch (err) {
-      setErr(err)
-
+      setErr(err);
     }
 
     // Placeholder image w/ random photos of dogs

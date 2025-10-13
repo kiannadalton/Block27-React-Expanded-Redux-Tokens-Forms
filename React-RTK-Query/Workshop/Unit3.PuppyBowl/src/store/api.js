@@ -19,7 +19,7 @@ export const api = createApi({
       providesTags: ["puppy"],
     }),
     addPuppy: builder.mutation({
-      query: ({ body }) => ({
+      query: (body) => ({
         url: "/players",
         method: "POST",
         body,

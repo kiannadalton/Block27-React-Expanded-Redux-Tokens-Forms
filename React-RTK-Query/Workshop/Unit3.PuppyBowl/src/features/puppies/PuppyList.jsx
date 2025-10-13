@@ -7,10 +7,9 @@ import {  useGetPuppiesQuery } from "../../store/api";
  */
 export default function PuppyList({ setSelectedPuppyId }) {
   // TODO: Get data from getPuppies query
+  // *Completed
     const { data, error, isLoading } = useGetPuppiesQuery();
     
-console.log("data", data);
-
     if(error){
       console.log("error", error)
     }
