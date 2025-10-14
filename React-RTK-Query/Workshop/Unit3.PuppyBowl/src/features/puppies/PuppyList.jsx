@@ -16,6 +16,7 @@ export default function PuppyList({ setSelectedPuppyId }) {
   return (
     <article>
       <h2>Roster</h2>
+      <br />
       <ul className="puppies">
         {isLoading && <li>Loading puppies...</li>}
         {error && <p>Something went wrong! Please try again.</p>}

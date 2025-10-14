@@ -1,19 +1,103 @@
 #root {
-  padding: 1rem;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 125vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+main {
+  margin: 1.5rem;
+}
+h1 {
+  font-size: 2.7rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-bottom: white 1px solid;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  color: aquamarine;
+  border-bottom: white solid 2px;
+}
+
+#addPuppyHeader {
+  font-size: 2rem;
+  font-weight: 200;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  color: aquamarine;
+  border-bottom: transparent;
 }
 
 form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
   gap: 1ch;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: solid white 2px;
+  border-radius: 20px;
+  background-color: rgb(7, 23, 18);
+}
+
+input {
+  width: 100%;
+  height: 2rem;
+  font-size: 1.5rem;
+}
+input:focus-visible,
+select:focus-visible {
+  outline: aquamarine 2px solid;
+}
+
+label {
+  font-size: 1.5rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+button {
+  height: 2rem;
+  font-size: 1.5rem;
+  padding: 1rem, 3rem;
+  width: 80%;
+  background-color: black;
+  border: 1px white solid;
+  border-radius: 8px;
+  color: aquamarine;
+}
+
+button:hover {
+  transition: 0.8s;
+  background-color: aquamarine;
+  color: black;
+  border: transparent solid;
 }
 
 aside {
   display: flex;
   flex-direction: column;
   gap: 1ch;
+  border-top: solid white 2px;
+  border-left: solid white 2px;
+  padding: 1rem;
 }
 
 main {
@@ -26,18 +110,41 @@ main {
 
 article {
   overflow-y: auto;
+  padding: 1rem;
+  border-top: solid white 2px;
 }
 
+article::-webkit-scrollbar {
+  width: 1.5rem;
+  background-color: rgba(127, 255, 212, 0.63);
+  margin-left: 1.5rem;
+}
+
+article::-webkit-scrollbar-thumb {
+  background-color: black;
+  border: rgba(127, 255, 212, 0.63) 2px solid;
+  border-radius: 0.75rem;
+  height: 2rem;
+}
 .puppies {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.5rem;
+  gap: 2rem;
+  padding-top: 1rem;
 
+  h3 {
+    font-size: 1.5rem;
+  }
   li {
     display: flex;
     flex-flow: column;
     gap: 1ch;
+    align-items: center;
+    border: 2px solid aquamarine;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: rgb(7, 23, 18);
 
     figure {
       flex: 1;

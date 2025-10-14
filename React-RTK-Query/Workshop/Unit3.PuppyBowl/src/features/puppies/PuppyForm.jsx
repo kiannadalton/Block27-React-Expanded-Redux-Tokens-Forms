@@ -30,11 +30,15 @@ export default function PuppyForm() {
 
     // Placeholder image w/ random photos of dogs
     const imageUrl = "https://loremflickr.com/200/300/dog";
+
+    //resets form
+    setName("");
+    setBreed("");
   }
 
   return (
     <>
-      <h2>Add a Puppy</h2>
+      <h2 id="addPuppyHeader">Add a Puppy</h2>
       <form onSubmit={postPuppy}>
         <label>
           Name
