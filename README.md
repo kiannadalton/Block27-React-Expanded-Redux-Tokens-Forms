@@ -6,7 +6,7 @@ This is a collection of various items learned within React, including React Form
 
 - React Forms JWT Sign Up Workshop: https://block27signupworkshop.netlify.app/
 - React Redux Bank Account Workshop: https://block27reactreduxworkshop.netlify.app/
-- React RTK Query Puppy Bowl Workshop: https://unit2puppybowlworkshop.netlify.app/
+- React RTK Query Puppy Bowl Workshop: https://unit3puppybowlworkshop.netlify.app/
 
 ## Learning Lessons:
 
