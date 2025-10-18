@@ -18,4 +18,4 @@ In the React RTK Query Workshop, I have several moments of learning, especially 
 
 ## Demonstrates use of:
 
-React, Redux, Redux Toolkit, Json Web Tokens (JWT), Bearer, onSubmit, onClick, async/await, fetch, useState, useEffect GET, POST, Displaying error messages, spread operator (...), JSON.stringify, .json(), props, if, preventDefault(), useDispatch, configureStore, createSlice, useSelector, nested objects, createApi, fetchBaseQuery, useQuery, useMutation, middleware, .find, destructuring, SCSS
+React, Redux, Redux Toolkit, Json Web Tokens (JWT), Bearer, onSubmit, onClick, async/await, fetch, useState, useEffect GET, POST, Displaying error messages, spread operator (...), JSON.stringify, .json(), props, if, preventDefault(), useDispatch, configureStore, createSlice, useSelector, nested objects, createApi, fetchBaseQuery, useQuery, useMutation, middleware, .find, destructuring, SCSS, Jest, describe, test, expect, getByLabelText, queryByLabelText, getByRole, getByText, toHaveClass, screen, render, fireEvent, click,
