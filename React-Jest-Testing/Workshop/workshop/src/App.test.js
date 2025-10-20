@@ -32,17 +32,26 @@ describe("App component", () => {
     expect(featuredPuppyEmail).toBeInTheDocument();
   });
 
-  // TODO
+  // *Completed
   test("does not display the details of a featured puppy initially", () => {
     // Render the App component
+    render(<App />);
     // Assert that the featured puppy's name is not displayed
+    const featuredPuppyName = screen.queryByRole("heading");
+    expect(featuredPuppyName).not.toBeInTheDocument();
     // Assert that the featured puppy's age is not displayed
+    const featuredPuppyAge = screen.queryByText(/Age: /i);
+    expect(featuredPuppyAge).not.toBeInTheDocument();
+
     // Assert that the featured puppy's email is not displayed
+    const featuredPuppyEmail = screen.queryByText(/Email: /i);
+    expect(featuredPuppyEmail).not.toBeInTheDocument();
   });
 
   // TODO
   test("does not change the featured puppy when the same puppy is clicked twice", () => {
     // Render the App component
+    render(<App />);
     // Find the puppy with name "Sir Waggington"
     // Simulate a click on the puppy
     // Assert that the initial featured puppy's name is displayed
