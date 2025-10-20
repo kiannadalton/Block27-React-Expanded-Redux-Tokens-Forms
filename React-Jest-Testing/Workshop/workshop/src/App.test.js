@@ -73,10 +73,21 @@ describe("App component", () => {
   // TODO
   test("displays the details of a featured puppy when clicked", () => {
     // Render the App component
+    render(<App />);
     // Find the puppy with name "Miss Furbulous"
+    const puppyName = screen.getByText("Miss Furbulous");
     // Simulate a click on the puppy
+    fireEvent.click(puppyName);
     // Assert that the featured puppy's name is displayed
+    const featuredPuppyName = screen.getByRole("heading", {
+      name: /Miss Furbulous/i,
+    });
+    expect(featuredPuppyName).toBeInTheDocument();
     // Assert that the featured puppy's age is displayed
+    const featuredPuppyAge = screen.getByText(/Age: \d+/);
+    expect(featuredPuppyAge).toBeInTheDocument();
     // Assert that the featured puppy's email is displayed
+    const featuredPuppyEmail = screen.getByText(/Email: \S+/);
+    expect(featuredPuppyEmail).toBeInTheDocument();
   });
 });
