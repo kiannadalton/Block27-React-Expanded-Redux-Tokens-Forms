@@ -48,15 +48,26 @@ describe("App component", () => {
     expect(featuredPuppyEmail).not.toBeInTheDocument();
   });
 
-  // TODO
+  // * Completed
   test("does not change the featured puppy when the same puppy is clicked twice", () => {
     // Render the App component
     render(<App />);
     // Find the puppy with name "Sir Waggington"
+    let puppyName = screen.getByText("Sir Waggington");
     // Simulate a click on the puppy
+    fireEvent.click(puppyName);
     // Assert that the initial featured puppy's name is displayed
+    let featuredPuppyName = screen.getByRole("heading", {
+      name: /Sir Waggington/i,
+    });
+    expect(featuredPuppyName).toBeInTheDocument;
     // Simulate another click on the same puppy
+    fireEvent.click(puppyName);
     // Assert that the featured puppy's name is still displayed and is the same as the initial featured puppy
+    featuredPuppyName = screen.getByRole("heading", {
+      name: /Sir Waggington/i,
+    });
+    expect(featuredPuppyName).toBeInTheDocument;
   });
 
   // TODO
